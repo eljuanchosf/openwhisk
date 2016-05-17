@@ -9,6 +9,9 @@ sudo apt-get install couchdb -y
 sudo sed -i -- "s/;bind_address = 127.0.0.1/bind_address = 0.0.0.0/g" /etc/couchdb/local.ini
 sudo service couchdb restart
 
+echo "Wait for CouchDB to restart"
+sleep 10
+
 export DB_USER=iamkyloren
 export DB_PASSWORD=ILoveYouGrandPa
 export DB_HOST=$(ip route get 8.8.8.8 | awk '{print $NF; exit}')
