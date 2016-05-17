@@ -25,4 +25,6 @@ sed -i -- "s/OPEN_WHISK_DB_HOST=/OPEN_WHISK_DB_HOST=$DB_HOST/g" couchdb-local.en
 sed -i -- "s/OPEN_WHISK_DB_PORT=/OPEN_WHISK_DB_PORT=$DB_PORT/g" couchdb-local.env
 sed -i -- "s/OPEN_WHISK_DB_USERNAME=/OPEN_WHISK_DB_USERNAME=$DB_USER/g" couchdb-local.env
 sed -i -- "s/OPEN_WHISK_DB_PASSWORD=/OPEN_WHISK_DB_PASSWORD=$DB_PASSWORD/g" couchdb-local.env
+
+../db/createImmortalDBs.sh
 source all.sh
