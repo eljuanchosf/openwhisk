@@ -5,8 +5,7 @@ set -e
 curl -fsSL https://get.docker.com/gpg | sudo apt-key add -
 
 sudo add-apt-repository ppa:couchdb/stable -y
-sudo apt-get update --fix-missing
-sudo apt-get install git couchdb -y
+sudo apt-get install couchdb -y
 sudo sed -i -- "s/;bind_address = 127.0.0.1/bind_address = 0.0.0.0/g" /etc/couchdb/local.ini
 sudo service couchdb restart
 
