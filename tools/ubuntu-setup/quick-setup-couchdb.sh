@@ -28,3 +28,12 @@ sed -i -- "s/OPEN_WHISK_DB_PASSWORD=/OPEN_WHISK_DB_PASSWORD=$DB_PASSWORD/g" couc
 
 ../db/createImmortalDBs.sh
 source all.sh
+
+echo "********************************************************************************************"
+echo "* Now I will logout. Please login again and execute 'cd openwhisk && ant build deploy run' *"
+echo "********************************************************************************************"
+
+sleep 5
+
+logout
+
