@@ -1,4 +1,4 @@
-SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
+SCRIPTDIR="$(cd $(dirname -- "$0")/ && pwd)"
 ERRORS=0
 
 
